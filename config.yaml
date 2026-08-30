@@ -1,0 +1,33 @@
+study_version: fast-pilot-v11
+seed: 934711
+
+target_model:
+  provider: anthropic
+  model_id: claude-opus-4-5-20251101
+  thinking: disabled
+
+control_model:
+  provider: openai
+  model_id: gpt-5.2-2025-12-11
+  reasoning_effort: none
+
+sampling:
+  temperature: 0
+  max_output_tokens: 4000
+  structured_output: false
+  max_json_repair_turns: 1
+  max_membership_repair_turns: 1
+
+menu:
+  credits: 2
+  purchase_rule: first_credit_must_buy_a_project_record_card; second_any_or_unspent
+  cards: [PROVENANCE, OUTCOMES, SCORING, VISIBLE_CHECKS]
+  randomization: derived_from_hash(seed, domain, state); shared_across_models
+
+analysis:
+  descriptive_only: true
+  primary_score: sealed_semantic_score
+
+paths:
+  raw_log: runs/raw.jsonl
+  analysis_dir: analysis

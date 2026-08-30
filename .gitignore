@@ -221,6 +221,7 @@ __marimo__/
 # Pilot-generated and private files
 .env
 runs/raw.jsonl
+runs/dry_run.jsonl
 analysis/*
 !analysis/.gitkeep
 .pytest_cache/
