@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Pilot-generated and private files
+.env
+runs/raw.jsonl
+analysis/*
+!analysis/.gitkeep
+.pytest_cache/
