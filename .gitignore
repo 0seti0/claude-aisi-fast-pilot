@@ -220,8 +220,18 @@ __marimo__/
 
 # Pilot-generated and private files
 .env
-runs/raw.jsonl
 runs/dry_run.jsonl
-analysis/*
-!analysis/.gitkeep
 .pytest_cache/
+__pycache__/
+
+# analysis/: default-ignore derived output; explicitly track code and commitments
+analysis/*
+analysis/sealed/
+!analysis/.gitkeep
+!analysis/make_blind_packet.py
+!analysis/review_codebook.md
+!analysis/pre_scoring_decision.md
+!analysis/reviewer_provenance.md
+!analysis/notes.md
+!analysis/blind_review_coded.csv
+!analysis/*.sha256
